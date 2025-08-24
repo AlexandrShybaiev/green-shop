@@ -9,6 +9,7 @@ body {
     font-family: 'Cera Pro', sans-serif;
 }
 
+
 /*header*/
 .header {
     margin-top: 30px;
@@ -28,20 +29,27 @@ body {
 
         .nav {
             height: 45px;
+
         }
 
-        .menu {
+        /*Первый UL*/
+        /*почему сюда если даю больше юл ничего не работает*/
+
+        .menu_ul_zero {
             display: flex;
             list-style: none;
             gap: 25px 50px;
             padding: 10px 0 25px;
 
-            .nav_menu {
-                padding: 10px 0 25px;
 
+            /*почему сюда даю больше ли и работает*/
+
+            > li {
+                position: relative; /* для подменю */
             }
 
-            a {
+            .menu_a-zero {
+                padding: 10px 0 25px;
                 text-decoration: none;
                 color: #3D3D3D;
                 font-weight: 400;
@@ -56,7 +64,80 @@ body {
                     line-height: 100%;
 
                 }
+
             }
+
+            /*почему не вложить   выпадающие меню во внутрь menu_a-zero*/
+
+
+            .menu_ul_one,
+            .menu_ul_two {
+                display: none;
+                position: absolute;
+                color: #3D3D3D;
+                background: #EDF6EE;
+                list-style: none;
+                margin: 0;
+                width: 188px;
+                /*дальше шрифт*/
+                font-family: Encode Sans Expanded;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                z-index: 1000;
+                /*padding-top: 12px;*/
+
+            }
+
+            .menu_ul_one {
+                /*top: 100%;*/
+                top: calc(100% + 24px);
+                left: 0;
+
+            }
+
+            .menu_ul_two {
+                top: 0;
+                left: 100%;
+            }
+
+            /* Показ */
+
+            > .menu_li-zero:hover > .menu_ul_one {
+                display: block;
+
+            }
+
+            .menu_li_one {
+                position: relative;
+
+                &:hover > .menu_ul_two {
+                    display: block;
+                }
+            }
+
+            /* Ссылки подменю */
+
+            .menu_ul_one a,
+            .menu_ul_two a {
+
+                display: block;
+                text-decoration: none;
+                color: #3D3D3D;
+                padding: 8px 14px;
+            }
+
+            .menu_ul_one a:hover,
+            .menu_ul_two a:hover {
+                background: #1A712A;
+                color: #ffffff;
+                font-family: Encode Sans Expanded;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 100%;
+
+            }
+
         }
 
         /*кнопка логин справа и два значка*/
@@ -94,7 +175,13 @@ body {
         }
 
     }
+
 }
+
+
+/*.header nav {*/
+/*попробуй заменить на аналогию своих класов или добавь классы или теги*/
+
 
 .section1 .container {
     background: linear-gradient(97.77deg,
@@ -205,6 +292,7 @@ body {
             padding-top: 14px;
             padding-left: 18px;
             padding-bottom: 7px;
+
         }
 
         .aside_list {
@@ -214,6 +302,7 @@ body {
             padding-left: 30px;
             font-weight: 400;
             margin-bottom: 224px;
+
 
             :hover {
                 color: #46A358;
@@ -247,6 +336,7 @@ body {
     .product_nav {
         display: flex;
         justify-content: space-between;
+
 
     }
 
