@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/font.css">
-    <link href="https://db.onlinewebfonts.com/c/1da2ac0ce2475f77ead14788891e054a?family=Hanging+Letters" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/1da2ac0ce2475f77ead14788891e054a?family=Hanging+Letters"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
 
     <!--    <link rel="stylesheet" href="css/normalize.css">-->
     <link rel="stylesheet" href="css/styles.css">
@@ -16,7 +18,10 @@
 <header class=" header ">
     <div class="container">
         <div class="flex-container">
-            <img class="logo" src="./img/greenshop.svg" alt="logo greenshop">
+            <svg class="logo">
+                <use xlink:href="./sprite.svg#greenshop"/>
+            </svg>
+
             <nav class="nav">
                 <ul class="menu_ul_zero">
                     <li class="menu_li-zero"><a class="menu_a-zero" href="#">Home</a></li>
@@ -76,8 +81,9 @@
     </div>
 </header>
 <main>
-        <section class="section1">
-            <div class="container">
+    <section class="section1">
+        <div class="container">
+            <div class="flex-container">
                 <div class="left_side">
                     <h3>
                         Welcome to GreenShop
@@ -87,7 +93,7 @@
                     </h1>
                     <p>
                         We are an online plant shop offering a wide range of cheap and trendy plants. Use our plants to
-                        create a unique Urban Jungle. Order your favorite plants!
+                        create an unique Urban Jungle. Order your favorite plants!
                     </p>
                     <button class="btn main">
                         SHOP NOW
@@ -102,7 +108,8 @@
                          alt="Квіти ">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     <section class="section2">
         <div class="container">
             <aside class="aside">
@@ -571,12 +578,8 @@
                         </p>
                         <button class="btn-find-more">
                             Find More
-                            <svg class="svg-arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.8126 5.79428L1.56258 5.79428" stroke="white" stroke-width="1.5"
-                                      stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8.27485 1.2759C8.27485 1.2759 12.8123 3.72165 12.8123 5.79315C12.8123 7.86615 8.27485 10.3127 8.27485 10.3127"
-                                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="svg-arrow" >
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
@@ -595,12 +598,8 @@
                             We are an online plant shop offering a wide range of cheap and trendy plants </p>
                         <button class="btn-find-more">
                             Find More
-                            <svg class="svg-arrow" width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.8126 5.79428L1.56258 5.79428" stroke="white" stroke-width="1.5"
-                                      stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8.27485 1.2759C8.27485 1.2759 12.8123 3.72165 12.8123 5.79315C12.8123 7.86615 8.27485 10.3127 8.27485 10.3127"
-                                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg class="svg-arrow" >
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
@@ -632,16 +631,8 @@
                             patio. </p>
                         <button class="btn-read-more">
                             Read More
-                            <svg class="arrow-read-more"
-                                 width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M2.66667 7.81714C2.66667 7.56401 2.85477 7.35481 3.09882 7.3217L3.16667 7.31714L13.1667 7.31714C13.4428 7.31714 13.6667 7.541 13.6667 7.81714C13.6667 8.07027 13.4786 8.27947 13.2345 8.31257L13.1667 8.31714H3.16667C2.89053 8.31714 2.66667 8.09328 2.66667 7.81714Z"
-                                      fill="#3D3D3D"/>
-
-                                <path d="M8.78068 4.15517C8.585 3.96033 8.58431 3.64375 8.77915 3.44807C8.95628 3.27018 9.23402 3.25344 9.43008 3.39825L9.48626 3.44655L13.5196 7.46255C13.698 7.6402 13.7142 7.91895 13.5683 8.11499L13.5196 8.17114L9.48629 12.1878C9.29062 12.3827 8.97404 12.382 8.77918 12.1863C8.60204 12.0085 8.58648 11.7307 8.73212 11.5352L8.78065 11.4792L12.458 7.81666L8.78068 4.15517Z"
-                                      fill="#3D3D3D"/>
-
+                            <svg class="arrow-read-more">
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
@@ -662,16 +653,8 @@
                         </p>
                         <button class="btn-read-more">
                             Read More
-                            <svg class="arrow-read-more"
-                                 width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M2.66667 7.81714C2.66667 7.56401 2.85477 7.35481 3.09882 7.3217L3.16667 7.31714L13.1667 7.31714C13.4428 7.31714 13.6667 7.541 13.6667 7.81714C13.6667 8.07027 13.4786 8.27947 13.2345 8.31257L13.1667 8.31714H3.16667C2.89053 8.31714 2.66667 8.09328 2.66667 7.81714Z"
-                                      fill="#3D3D3D"/>
-
-                                <path d="M8.78068 4.15517C8.585 3.96033 8.58431 3.64375 8.77915 3.44807C8.95628 3.27018 9.23402 3.25344 9.43008 3.39825L9.48626 3.44655L13.5196 7.46255C13.698 7.6402 13.7142 7.91895 13.5683 8.11499L13.5196 8.17114L9.48629 12.1878C9.29062 12.3827 8.97404 12.382 8.77918 12.1863C8.60204 12.0085 8.58648 11.7307 8.73212 11.5352L8.78065 11.4792L12.458 7.81666L8.78068 4.15517Z"
-                                      fill="#3D3D3D"/>
-
+                            <svg class="arrow-read-more">
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
@@ -693,16 +676,8 @@
                         </p>
                         <button class="btn-read-more">
                             Read More
-                            <svg class="arrow-read-more"
-                                 width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M2.66667 7.81714C2.66667 7.56401 2.85477 7.35481 3.09882 7.3217L3.16667 7.31714L13.1667 7.31714C13.4428 7.31714 13.6667 7.541 13.6667 7.81714C13.6667 8.07027 13.4786 8.27947 13.2345 8.31257L13.1667 8.31714H3.16667C2.89053 8.31714 2.66667 8.09328 2.66667 7.81714Z"
-                                      fill="#3D3D3D"/>
-
-                                <path d="M8.78068 4.15517C8.585 3.96033 8.58431 3.64375 8.77915 3.44807C8.95628 3.27018 9.23402 3.25344 9.43008 3.39825L9.48626 3.44655L13.5196 7.46255C13.698 7.6402 13.7142 7.91895 13.5683 8.11499L13.5196 8.17114L9.48629 12.1878C9.29062 12.3827 8.97404 12.382 8.77918 12.1863C8.60204 12.0085 8.58648 11.7307 8.73212 11.5352L8.78065 11.4792L12.458 7.81666L8.78068 4.15517Z"
-                                      fill="#3D3D3D"/>
-
+                            <svg class="arrow-read-more">
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
@@ -722,20 +697,121 @@
                         </p>
                         <button class="btn-read-more">
                             Read More
-                            <svg class="arrow-read-more"
-                                 width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-
-                                <path d="M2.66667 7.81714C2.66667 7.56401 2.85477 7.35481 3.09882 7.3217L3.16667 7.31714L13.1667 7.31714C13.4428 7.31714 13.6667 7.541 13.6667 7.81714C13.6667 8.07027 13.4786 8.27947 13.2345 8.31257L13.1667 8.31714H3.16667C2.89053 8.31714 2.66667 8.09328 2.66667 7.81714Z"
-                                      fill="#3D3D3D"/>
-
-                                <path d="M8.78068 4.15517C8.585 3.96033 8.58431 3.64375 8.77915 3.44807C8.95628 3.27018 9.23402 3.25344 9.43008 3.39825L9.48626 3.44655L13.5196 7.46255C13.698 7.6402 13.7142 7.91895 13.5683 8.11499L13.5196 8.17114L9.48629 12.1878C9.29062 12.3827 8.97404 12.382 8.77918 12.1863C8.60204 12.0085 8.58648 11.7307 8.73212 11.5352L8.78065 11.4792L12.458 7.81666L8.78068 4.15517Z"
-                                      fill="#3D3D3D"/>
-
+                            <svg class="arrow-read-more">
+                                <use xlink:href="./sprite.svg#arrow-right"/>
                             </svg>
                         </button>
                     </div>
 
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section7">
+        <div class="container">
+            <div class="flex-container">
+
+                <div class="section7-card-svg">
+                    <div class="card-svg-wrapper">
+                        <svg class="svg-position">
+                            <use xlink:href="./sprite.svg#plant-1"/>
+                        </svg>
+                    </div>
+
+                    <h5 class="card-section7-title">
+                        Garden Care
+                    </h5>
+                    <p class="card-section7-paragrath">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="section7-card-svg">
+                    <div class="card-svg-wrapper">
+                        <!--                        <svg class="svg-position">-->
+                        <!--                            <use xlink:href="./sprite.svg#plant-1"/>-->
+                        <!--                        </svg>-->
+                        <svg class="svg-position">
+                            <use xlink:href="./sprite.svg#plant-2"/>
+                        </svg>
+                    </div>
+
+                    <h5 class="card-section7-title">
+                        Plant Renovation
+                    </h5>
+                    <p class="card-section7-paragrath">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="section7-card-svg">
+                    <div class="card-svg-wrapper">
+                        <!--                        <svg class="svg-position">-->
+                        <!--                            <use xlink:href="./sprite.svg#plant-1"/>-->
+                        <!--                        </svg>-->
+                        <svg class="svg-position">
+                            <use xlink:href="./sprite.svg#plant-3"/>
+                        </svg>
+                    </div>
+
+                    <h5 class="card-section7-title">
+                        Watering Graden
+                    </h5>
+                    <p class="card-section7-paragrath">
+                        We are an online plant shop offering a wide range of cheap and trendy plants.
+                    </p>
+                </div>
+                <div class="section7-form">
+                    <h5 class="card-section7-title-form">
+                        Would you like to join newsletters?
+                    </h5>
+                    <form class="card-section7-form">
+                        <input type="email"
+                               name="email" id="email" placeholder="Enter your email address">
+                        <button class="btn-subscribe" type="submit">
+                            Join
+                        </button>
+                    </form>
+                    <p class="card-section7-paragrath-form">
+                        We usually post offers and challenges in newsletter. We’re your online houseplant destination.
+                        We offer a wide range of houseplants and accessories shipped directly from our (green)house to
+                        yours!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section8">
+        <div class="container">
+            <div class="flex-container">
+                <svg class="section8-svg-logo">
+                    <use xlink:href="./sprite.svg#greenshop"/>
+                </svg>
+                <div>
+                    <svg class="section8-svg-location">
+                        <use xlink:href="./sprite.svg#location"/>
+                    </svg>
+                    <p class="section8-paragrath">
+                        70 West Buckingham Ave.
+                        Farmingdale, NY 11735
+                    </p>
+                </div>
+
+                <div>
+                    <svg class="section8-svg-message">
+                        <use xlink:href="./sprite.svg#message"/>
+                    </svg>
+                    <p class="section8-paragrath">
+                        contact@greenshop.com
+                    </p>
+                </div>
+
+                <div>
+                    <svg class="section8-svg-calling">
+                        <use xlink:href="./sprite.svg#calling"/>
+                    </svg>
+                    <p class="section8-paragrath">
+                        +88 01911 717 490
+                    </p>
                 </div>
             </div>
         </div>
