@@ -798,20 +798,9 @@ body {
             height: 35px;
         }
 
-        .section8-svg-location {
+        .section8-svg-mini {
             width: 20px;
             height: 20px;
-        }
-
-        .section8-svg-message {
-            width: 20px;
-            height: 20px;
-        }
-
-        .section8-svg-calling {
-            width: 20px;
-            height: 20px;
-            background: darkred
         }
 
         .section8-paragrath {
@@ -822,4 +811,47 @@ body {
         }
 
     }
+}
+
+
+.footer {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 129px;
+        padding: 33px 0 29px 25px;
+
+        .footer-card {
+            .footer-tittle {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 16px;
+                color: #3D3D3D;
+            }
+
+            .footer-list {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 30px;
+                color: #3D3D3D;
+                list-style: none;
+            }
+
+            .footer-social {
+
+                .section8-svg-social-media {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+
+    }
+}
+.copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
 }
