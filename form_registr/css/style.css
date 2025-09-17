@@ -1,0 +1,115 @@
+.form-wrapper{
+    width: 500px;
+    height: 656px;
+    margin: 0 100px;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding-top: 52px;
+    padding-bottom: 40px;
+
+}
+body{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+   
+
+}
+.login{
+    color: #3D3D3D;
+    font-weight: 500;
+    font-size: 20px;
+    list-style: none;
+}
+.register{
+    color: #46A358;
+    font-weight: 500;
+    font-size: 20px;
+    list-style: none;
+}
+
+.info{
+    width: 300px;
+    height: 16px;
+    color: #3D3D3D;
+    font-weight: 400;
+    font-size: 13px;
+    /*justify-content: center;*/
+    text-align: center;
+    margin: 0 auto;
+}
+.form_grey{
+    font-weight: 400;
+    font-size: 14px;
+    color: #A5A5A5;
+    /*box-sizing: border-box;*/
+    text-align: center;
+    border-color: #EAEAEA;
+}
+.tractor{
+    width: 300px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 14px;
+    padding: 12px;
+}
+
+.button-green{
+    background: #46A358;
+    color: #FFFFFF;
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 41px;
+}
+.register_with{
+    font-size: 13px;
+    font-weight: 400;
+    height: 16px;
+    color: #3D3D3D;
+    text-align: center;
+    margin-top: 36px;
+}
+.google{
+    width: 300px;
+    height: 40px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px;
+    border-style: solid;
+    border-color: #EAEAEA;
+    border-radius: 5px;
+    margin-top: 27px;
+    padding: 10px 68px;
+    text-align: center;
+}
+.facebook{
+    display: marker;
+    width: 300px;
+    height: 40px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px;
+    border-style: solid;
+    border-color: #EAEAEA;
+    margin-top: 15px;
+}
+.mini_img{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.line_green{
+    background: #46A358;
+    /*width: 500px;*/
+    height: 10px;
+    margin-top: 40px;
+}
