@@ -445,9 +445,13 @@ body {
             width: 20px;
             height: 20px;
 
+
+
+
             &:hover {
               color: #46A358;
             }
+
           }
 
         }
