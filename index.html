@@ -5,8 +5,12 @@
   <title>GREENSHOP</title>
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link
     rel="stylesheet"
     href="./css/reset.css"
@@ -30,7 +34,8 @@
     href="./css/styles.css"
   >
 </head>
-<body>
+<body class="overlay">
+<div class="preloader"></div>
 <header class=" header ">
   <div class="container">
     <div class="flex-container">
@@ -159,17 +164,27 @@
             <use xlink:href="./sprite.svg#basket" />
           </svg>
         </button>
-        <button class="btn-login">
+
+        <button
+          class="btn-login"
+          onclick="window.open('./form_registr/index.html', '_blank')"
+        >
           <svg class="logout-icon">
             <use xlink:href="./sprite.svg#logout" />
           </svg>
-          <a
-            href="./form_registr/index.html"
-            target="_blank"
-          >
-            Login
-          </a>
+          Login
         </button>
+        <!--        <button class="btn-login">-->
+        <!--          <svg class="logout-icon">-->
+        <!--            <use xlink:href="./sprite.svg#logout" />-->
+        <!--          </svg>-->
+        <!--          <a-->
+        <!--            href="./form_registr/index.html"-->
+        <!--            target="_blank"-->
+        <!--          >-->
+        <!--            Login-->
+        <!--          </a>-->
+        <!--        </button>-->
       </div>
     </div>
   </div>
@@ -569,9 +584,8 @@
         <div class="pages-block">3</div>
         <div class="pages-block">4</div>
         <div class="pages-block">
-          <svg>
+          <svg class="page-arrow">
             <use
-              class="page-arrow"
               xlink:href="./sprite.svg#page-right"
             />
           </svg>
@@ -954,7 +968,18 @@
     </div>
   </footer>
   <p class="copyright">© 2021 GreenShop. All Rights Reserved.</p>
-
 </main>
+<script>
+  window.addEventListener("load", function () {
+    const spinner = document.querySelector(".preloader");
+    const main = document.querySelector("main");
+
+    setTimeout(() => {
+      document.querySelector("body").classList.remove("overlay");
+      spinner.style.display = "none";
+      main.style.display = "block";
+    }, 1000);
+  });
+</script>
 </body>
 </html>

@@ -1,80 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>GREENSHOP</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <title>GREENSHOP</title>
+  <link
+    rel="stylesheet"
+    href="../css/font.css"
+  >
+  <link
+    rel="stylesheet"
+    href="./css/style.css"
+  >
 </head>
-<body>
-<div class="form-wrapper">
-        <nav class="navbar">
-            <span class="login">Login</span>
-            <span class="divider">|</span>
-            <span class="register">Register</span>
-            <!--        <ul class="login">-->
-            <!--            <li>-->
-            <!--                Login-->
-            <!--            </li>-->
-            <!--        </ul>-->
-            <!--        <ul class="register">-->
-            <!--            <li>-->
-            <!--                Register-->
-            <!--            </li>-->
-            <!--        </ul>-->
-        </nav>
-        <p class="info">Enter your email and password to register.</p>
-    <main>
-        <div class="form_grey" >
-            <form>
-                <input class="tractor"
-                        type="text"
-                       name="username"
-                       placeholder="Username"
-                       id="username"
-                       required>
+<body class="overlay">
+<div class="preloader"></div>
+<main>
+  <div class="form-wrapper">
+    <nav class="navbar">
+      <span class="login">Login</span>
+      <span class="divider">|</span>
+      <span class="register">Register</span>
 
-                <input class="tractor"
-                        type="email"
-                       name="email"
-                       placeholder="Enter your email address"
-                       id="email"
-                       required>
+    </nav>
+    <p class="info">Enter your email and password to register.</p>
 
-                <input class="tractor"
-                        type="password"
-                       name="password"
-                       placeholder="Password"
-                       id="p1"
-                       required>
+    <div class="form_grey">
+      <form>
+        <input
+          class="tractor"
+          type="text"
+          name="username"
+          placeholder="Username"
+          id="username"
+          required
+        >
 
-                <input class="tractor"
-                        type="password"
-                       name="confirm_password"
-                       placeholder="Confirm Password"
-                       id="p2"
-                       required>
+        <input
+          class="tractor"
+          type="email"
+          name="email"
+          placeholder="Enter your email address"
+          id="email"
+          required
+        >
 
-                <button class="button-green" >
-                    Register
-                </button>
+        <input
+          class="tractor"
+          type="password"
+          name="password"
+          placeholder="Password"
+          id="p1"
+          required
+        >
 
-                <p class="register_with">Or register with</p>
-
-                <button class="google">
-                    <img src="./img/google.svg" alt="google" class="mini_img">
-                    Continue with Google
-                </button>
-                <button class="facebook">
-                    <img src="./img/facebook.svg" alt="facebook" class="mini_img">
-                    Continue with Facebook
-                </button>
-                <div class="line_green">
-
-                </div>
-            </form>
+        <input
+          class="tractor"
+          type="password"
+          name="confirm_password"
+          placeholder="Confirm Password"
+          id="p2"
+          required
+        >
+        <div class="checkbox-wrapper-13">
+          <label
+            class="checkbox"
+            for="c1-13"
+          >
+            <input
+              id="c1-13"
+              type="checkbox"
+            >
+            I am over 18 years old
+          </label>
         </div>
 
-    </main>
-</div>
+
+        <button class="button-green">
+          Register
+        </button>
+
+        <p class="register_with">Or register with</p>
+
+        <button class="google">
+          <img
+            src="./img/google.svg"
+            alt="google"
+            class="mini_img"
+          >
+          Continue with Google
+        </button>
+        <button class="facebook">
+          <img
+            src="./img/facebook.svg"
+            alt="facebook"
+            class="mini_img"
+          >
+          Continue with Facebook
+        </button>
+        <div class="line_green">
+
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+
+<script>
+  window.addEventListener("load", function () {
+    const spinner = document.querySelector(".preloader");
+    const main = document.querySelector("main");
+
+    setTimeout(() => {
+      document.querySelector("body").classList.remove("overlay");
+      spinner.style.display = "none";
+      main.style.display = "block";
+    }, 1000);
+  });
+</script>
 </body>
 </html>
