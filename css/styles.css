@@ -23,7 +23,7 @@ body {
     height: 53px;
     border-bottom: 0.3px solid #46A35880;
     box-sizing: border-box;
-
+    padding-bottom: 10px;
 
     .logo {
       cursor: pointer;
@@ -33,7 +33,11 @@ body {
 
     .nav {
       height: 45px;
+      &:nth-child(2) {
+        /*margin-left: -16px;*/
+        transform: translateX(-18px);
 
+      }
     }
 
     /*Первый UL*/
@@ -82,7 +86,7 @@ body {
         background: #EDF6EE;
         list-style: none;
         margin: 0;
-        width: 188px;
+        width: 192px;
         /*дальше шрифт*/
         font-family: Encode Sans Expanded;
         font-weight: 400;
@@ -141,6 +145,8 @@ body {
         line-height: 100%;
 
       }
+
+
 
     }
 
@@ -341,29 +347,97 @@ body {
     }
 
     .aside_list {
+      /*display: flex;*/
+      /*justify-content: space-between;*/
       font-size: 15px;
       line-height: 40px;
       list-style: none;
       padding-left: 30px;
+      padding-right: 24px;
       font-weight: 400;
-      margin-bottom: 224px;
-
 
       :hover {
         color: #46A358;
+      }
+
+      li {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .aside_price__list {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-right: 66px;
+      padding-left: 18px;
+
+
+      .aside_price__list__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 16px;
+        margin-top: 33px;
+        margin-bottom: 24px;
+      }
+
+      .aside__range {
+        appearance: none;
+        margin-bottom: 21px;
+        width: 161px;
+        height: 4px;
+        background: #46a358;
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: #46a358;
+        }
+      }
+
+      span {
+        color: #46a358;
+        font-weight: 700;
+      }
+
+      .filter-btn {
+        max-width: 90px;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 26px;
+        color: #FFFFFF;
+        background-color: #46a358;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        margin-left: 12px;
+        margin-top: 16px;
+      }
+    }
+
+    .aside_size__list {
+      margin-top: 30px;
+
+      &:nth-child(1) {
+        margin-top: 50px;
       }
     }
 
     /*poster image aside*/
 
     .poster {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      width: 310px;
-      height: 470px;
-      box-sizing: border-box;
-      overflow: hidden;
+      margin-top: 19px;
+      /*display: flex;*/
+      /*flex-direction: column;*/
+      /*justify-content: flex-end;*/
+      /*width: 310px;*/
+      /*height: 470px;*/
+      /*box-sizing: border-box;*/
+      /*overflow: hidden;*/
+
     }
   }
 
@@ -433,7 +507,7 @@ body {
   }
 
   .card-all {
-    margin-top: 31px;
+    margin-top: 27px;
     display: flex;
     flex-wrap: wrap;
     gap: 70px 33px;
@@ -572,8 +646,8 @@ body {
 
 
 .section3 {
-  margin-top: 90px;
-  margin-bottom: 82px;
+  margin-top: 88px;
+  margin-bottom: 120px;
   /*margin: 90px 0 94px 0;*/
 
   .pages {
@@ -630,10 +704,14 @@ body {
       display: flex;
       align-items: center;
       justify-content: center;
-      box-sizing: border-box;
+      /*box-sizing: border-box;*/
       background: #FBFBFB;
+      /*position: relative;*/
 
       .summer-cactus-image {
+        /*position: absolute;*/
+        /*top: -92px;*/
+        /*left: -8px;*/
         width: 287px;
         height: 292px;
       }
@@ -653,6 +731,7 @@ body {
         text-align: right;
         text-transform: uppercase;
         color: #3D3D3D;
+
       }
 
       .sub-tittle-cactus {
@@ -662,11 +741,13 @@ body {
         line-height: 24px;
         text-align: right;
         color: #727272;
+
+
       }
 
       .btn-find-more {
         margin-top: 25px;
-        margin-bottom: 46px;
+        margin-bottom: 36px;
         margin-left: 129px;
         /*padding: 11px 47px 9px 28px;*/
         padding: 10px 28px;
@@ -696,7 +777,7 @@ body {
 }
 
 .section6 {
-  margin-top: 138px;
+  margin-top: 121px;
 
   .section6-description {
     display: flex;
@@ -725,8 +806,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    margin-bottom: 68px;
-    margin-top: 35px;
+    margin-bottom: 98px;
+    margin-top: 22px;
     gap: 42px;
 
     .card-section6 {
@@ -793,7 +874,7 @@ body {
     display: flex;
     /*justify-content: space-between;*/
     gap: 61px;
-    padding: 24px 25px;
+    padding: 21px 25px;
     background: #FBFBFB;
 
     .section7-card-svg {
@@ -830,14 +911,14 @@ body {
 
     .section7-form {
       /*height: 40px;*/
-      width: 354px;
+      max-width: 354px;
 
       .card-section7-title-form {
         font-weight: 700;
         font-size: 18px;
         line-height: 16px;
         padding-top: 13px;
-        padding-bottom: 25px;
+        padding-bottom: 18px;
       }
 
       .card-section7-form {
@@ -859,6 +940,10 @@ body {
           padding: 12px;
           font-size: 14px;
           outline: none;
+
+          &:hover {
+            color: #52C368
+          }
         }
 
         .btn-subscribe {
@@ -895,12 +980,12 @@ body {
 .section8 {
   .flex-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 115px;
+    gap: 85px;
     box-sizing: border-box;
-    background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);
-    /*height: 88px;*/
+    /*background: linear-gradient(90deg, #EDF6EF 0%, #52C368 100%);*/
+    background-color: #46A3581A;
     padding-top: 27px;
     padding-left: 23px;
     padding-right: 22px;
@@ -917,6 +1002,16 @@ body {
       align-items: center;
       gap: 9px;
 
+      &:nth-child(3) {
+        /*margin-left: -23px;*/
+        transform: translateX(-23px);
+      }
+
+      &:nth-child(4) {
+        /*margin-left: -16px;*/
+        transform: translateX(-38px);
+
+      }
     }
 
     .section8-svg-mini {
@@ -935,6 +1030,7 @@ body {
       line-height: 22px;
       max-width: 178px;
 
+
     }
 
   }
@@ -944,8 +1040,10 @@ body {
 .footer {
   .flex-container {
     display: flex;
-    justify-content: space-between;
-    gap: 129px;
+    /*justify-content: space-between;*/
+    /*gap: 129px;*/
+    justify-content: flex-start;
+    gap: 163px;
     padding: 33px 0 29px 25px;
     border-bottom: solid 1px #46A35833;;
 
@@ -974,7 +1072,6 @@ body {
         padding-top: 8px;
         cursor: pointer;
 
-
         :hover {
           color: #46A358;
         }
@@ -992,11 +1089,29 @@ body {
           height: 30px;
           cursor: pointer;
           color: transparent;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
+
+
       }
 
       .pay {
         cursor: pointer;
+
+      }
+
+      &:nth-child(3) {
+        /*margin-left: -16px;*/
+        transform: translateX(-18px);
+
+      }
+
+      &:nth-child(4) {
+        /*margin-left: -16px;*/
+        transform: translateX(-13px);
 
       }
     }
@@ -1055,3 +1170,7 @@ main {
     transform: rotate(360deg);
   }
 }
+
+/** {*/
+/*  outline: 1px solid rgba(255, 0, 0, 0.2);*/
+/*}*/
