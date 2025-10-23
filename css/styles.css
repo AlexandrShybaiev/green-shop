@@ -526,16 +526,12 @@ body {
     /*poster image aside*/
 
     .poster {
+      height: auto;
+      width: 100%;
       margin-top: 19px;
       position: absolute;
-      transform: translateX(-29px);
-      /*display: flex;*/
-      /*flex-direction: column;*/
-      /*justify-content: flex-end;*/
-      /*width: 310px;*/
-      /*height: 470px;*/
-      /*box-sizing: border-box;*/
-      overflow: hidden;
+      /*transform: translateX(-29px);*/
+      /*overflow: hidden;*/
 
     }
   }
@@ -797,31 +793,40 @@ body {
     display: flex;
     gap: 28px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    /*flex-wrap: wrap;*/
 
     .summer-cactus {
       display: flex;
+      flex: 1 1 45%;
       align-items: center;
-      justify-content: center;
-      /*box-sizing: border-box;*/
+      justify-content: space-between;
+      box-sizing: border-box;
       background: #FBFBFB;
+      transition: transform 0.3s ease;
+      padding: 20px;
       /*position: relative;*/
 
       .summer-cactus-image {
-        /*position: absolute;*/
-        /*top: -92px;*/
-        /*left: -8px;*/
-        width: 287px;
-        height: 292px;
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+
+        /*width: 287px;*/
+        /*height: 292px;*/
       }
     }
 
     .summer-cactus-text {
+      flex: 1;
       padding-top: 37px;
       padding-right: 30px;
       line-height: 48px;
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
 
       .tittle-cactus {
         font-weight: 900;
@@ -1279,9 +1284,29 @@ main {
   .container {
     padding: 0 16px;
   }
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .section2 {
+
+    .card-all {
+      justify-content: center;
+    }
+  }
+
+  .section5 {
+    .container {
+      .flex-container {
+
+      }
+    }
+  }
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1048px) {
   .container {
     padding: 0 16px;
   }
@@ -1368,7 +1393,20 @@ main {
 
   .section8 {
     .flex-container {
+      margin: 0 auto;
       flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: 20px;
+
+      .section8-card {
+        flex-direction: column;
+
+        &:nth-child(n+3) {
+          transform: none;
+        }
+      }
     }
   }
 
@@ -1450,6 +1488,7 @@ main {
       }
 
       .product_nav {
+        gap: 16px;
         justify-content: space-around;
       }
     }
@@ -1491,26 +1530,117 @@ main {
     .flex-container {
       flex-wrap: wrap;
       justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 204px;
     }
   }
 
   .section8 {
-    .flex-container {
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
+    .container {
+      .flex-container {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
 
+        .section8-card {
+          flex-direction: column;
+
+          &:nth-child(n+3) {
+            transform: none;
+          }
+        }
+      }
     }
+
+
   }
 
   .footer {
-    .flex-container {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 60px
+    .container {
+      .flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
 
+        .footer-card {
+
+          &:nth-child(n+3) {
+            transform: none;
+          }
+        }
+      }
     }
+
   }
 }
 
+@media (max-width: 430px) {
+  .container {
+    padding: 0 16px;
 
+  }
+
+  .section2 {
+    .container {
+
+      .product_nav {
+
+        .product-btn-end {
+          text-align: end;
+        }
+      }
+    }
+
+  }
+
+  .section5 {
+    .container {
+      .flex-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .summer-cactus {
+          flex-direction: column;
+          width: 100%;
+          max-width: 360px; /* чтобы не растягивался слишком */
+          text-align: center;
+
+          .summer-cactus-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+          }
+
+          .summer-cactus-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+          }
+          .summer-cactus-text {
+            padding: 10px 15px;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .section8 {
+    padding: 0 16px;
+
+    .container {
+      .flex-container {
+        .section8-card {
+
+
+        }
+      }
+    }
+  }
+}
